@@ -240,10 +240,11 @@ class TopNav extends Component{
                 </MenuItem>
             </NavDropdown>
           </ul>
-          <a className={"btn pull-right btn-primary " + s.btnStyle}  style={{margin: '6px 10px'}}href="http://www.strapui.com/themes/ani-reactjs-theme/">
+
+          <a className={"btn pull-right btn-primary " + s.btnStyle}  style={{margin: '6px 10px'}}href="">
             <FormattedMessage
               id="buynow"
-              defaultMessage="Buy Now"
+              defaultMessage="Hey there"
             />
           </a>
         </div>

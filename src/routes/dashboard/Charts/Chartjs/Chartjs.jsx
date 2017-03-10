@@ -130,6 +130,8 @@ const donutOptions = {
   animateScale: false,
   responsive: true,
 
+  scales: true,
+
     // String - A legend template
   legendTemplate: '<ul class="<%=name.toLowerCase()%>-legend"><% '
   + 'for (const i=0; i<segments.length; i++){%><li><span style='
