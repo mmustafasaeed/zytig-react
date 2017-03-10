@@ -12,8 +12,6 @@ Follow the documentation to install and get started with the development:
 ###2. Installation
 
 ```shell
-$ git clone gitlab@gitlab.sahusoft.com:products/ani-react-theme.git -b master
-$ cd ani-react-theme.git
 $ npm install
 ```
 This will install both run-time project dependencies and developer tools listed
