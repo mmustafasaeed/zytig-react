@@ -93,13 +93,13 @@ class Home extends Component {
                 bgClass="info"
                 link="/dashboard/chartjs"
                 value="9"
-                progressValue={90}
+                progressValue={100}
               />
 
               </div>
               <div className="col-md-3 col-lg-3">
               <Stats
-                icon="heartbeat"
+                icon="signal"
                 text={
                   <FormattedMessage
                     id="stat2"
@@ -109,13 +109,13 @@ class Home extends Component {
                 bgClass="success"
                 link="/dashboard/chartjs"
                 value="T3"
-                progressValue={94}
+                progressValue={100}
               />
               </div>
 
               <div className="col-md-3 col-lg-3">
               <Stats
-                icon="ruler"
+                icon="list-alt"
                 text={
                   <FormattedMessage
                     id="stat3"
@@ -125,13 +125,13 @@ class Home extends Component {
                 bgClass="danger"
                 link="/dashboard/inbox"
                 value="12,351"
-                progressValue={72}
+                progressValue={100}
               />
               </div>
 
               <div className="col-md-3 col-lg-3">
               <Stats
-                icon="flag"
+                icon="heartbeat"
                 text={
                   <FormattedMessage
                     id="stat4"
@@ -140,8 +140,8 @@ class Home extends Component {
                 }
                 bgClass="danger"
                 link="/dashboard/inbox"
-                value="94%"
-                progressValue={72}
+                value="82%"
+                progressValue={100}
               />
               </div>
 
