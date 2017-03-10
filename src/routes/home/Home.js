@@ -79,11 +79,11 @@ class Home extends Component {
     return (
       <div className="animate">
         <div className="row">
-          <div className="col-md-4 col-lg-3">
+          <div className="col-md-12 col-lg-12">
             <div className={s.homeStats}>
-
+              <div className="col-md-3 col-lg-3">
               <Stats
-                icon="cloud-upload"
+                icon="tint"
                 text={
                   <FormattedMessage
                     id="stat1"
@@ -95,6 +95,9 @@ class Home extends Component {
                 value="9"
                 progressValue={90}
               />
+
+              </div>
+              <div className="col-md-3 col-lg-3">
               <Stats
                 icon="heartbeat"
                 text={
@@ -108,8 +111,11 @@ class Home extends Component {
                 value="94%"
                 progressValue={94}
               />
+              </div>
+
+              <div className="col-md-3 col-lg-3">
               <Stats
-                icon="flag"
+                icon="person-walking"
 
                 text={
                   <FormattedMessage
@@ -122,11 +128,31 @@ class Home extends Component {
                 value="12,351"
                 progressValue={72}
               />
+              </div>
+
+              <div className="col-md-3 col-lg-3">
+              <Stats
+                icon="flag"
+
+                text={
+                  <FormattedMessage
+                    id="stat4"
+                    defaultMessage="Posts flagged"
+                  />
+                }
+                bgClass="danger"
+                link="/dashboard/inbox"
+                value="12,351"
+                progressValue={72}
+              />
+              </div>
 
             </div>
           </div>
+        </div>
 
-          <div className="col-md-5 col-lg-6">
+        <div className="row">
+          <div className="col-md-11 col-lg-12">
             <div className="map-container box padder">
               <div className="panel">
                 <div className="panel-body">
@@ -165,7 +191,30 @@ class Home extends Component {
               </div>
             </div>
           </div>
+        </div>
 
+        <div className="row">
+          <div className="col-md-12 col-lg-12">
+            <div className={`map-container box padder ${s.powerSupplyChart}`}>
+              <Panel header={<span>Power Supply Waves</span>}>
+                <div>
+                  <ResponsiveContainer width="100%" height={275}>
+                    <LineChart data={lineChartData}>
+                      <CartesianGrid stroke="#ccc" />
+                      <XAxis />
+                      <YAxis />
+                      <Tooltip />
+                      <LineRechart type="monotone" dataKey="sine" stroke="#8884d8" />
+                      <LineRechart type="monotone" dataKey="cosine" stroke="#82ca9d" />
+                    </LineChart>
+                  </ResponsiveContainer>
+                </div>
+              </Panel>
+            </div>
+          </div>
+        </div>
+
+        <div className="row">
           <div className="col-md-3 col-lg-3">
             <div className="row">
               <div className="col-sm-12">
@@ -179,6 +228,11 @@ class Home extends Component {
                 </div>
               </div>
             </div>
+
+
+
+
+
             <div className={'row'}>
               <div className="col-sm-12 text-left">
                 <div className={`${s.bottomRightChart}`}>
@@ -206,10 +260,8 @@ class Home extends Component {
               </div>
             </div>
           </div>
-
         </div>
 
-        <div className="row">
 
 
           <div className="col-md-8 col-lg-8">
@@ -231,7 +283,7 @@ class Home extends Component {
           </div>
 
           <div className="col-md-4 col-lg-4">
-            <TodoList />
+           <TodoList />
           </div>
         </div>
       </div>
