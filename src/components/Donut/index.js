@@ -92,7 +92,7 @@ class Donut extends Component {
       <ResponsiveContainer width="100%" aspect={2} >
         <PieCharts
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
-          onMouseEnter={(data, index) => { this.onPieEnter(data, index); }}
+          onMouseEnter={(data, index) => { this.onPieEnter(data, index);  }}
         >
           <Pie
             activeIndex={this.state.activeIndex}

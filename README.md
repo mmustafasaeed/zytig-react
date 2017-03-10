@@ -12,6 +12,7 @@ Follow the documentation to install and get started with the development:
 ###2. Installation
 
 ```shell
+$ git clone https://github.com/mmustafasaeed/zytig-react.git -b master
 $ npm install
 ```
 This will install both run-time project dependencies and developer tools listed
