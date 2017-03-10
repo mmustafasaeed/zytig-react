@@ -1,8 +1,3 @@
-## Ani Theme React.js Version
-
-Thanks for purchasing the Ani Theme React.js Version.
-- Live Demo URL: http://ani-react-theme.geekydev.com:3000/
-- Product URL: http://www.strapui.com/themes/ani-reactjs-theme/
 
 Follow the documentation to install and get started with the development:
 
