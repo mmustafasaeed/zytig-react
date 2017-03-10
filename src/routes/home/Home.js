@@ -43,25 +43,6 @@ function plotData() {
 const lineChartData = plotData();
 
 
-const areaData = [
-      { name: 'Page A', uv: 4000, pv: 2400, amt: 2400, value: 600 },
-      { name: 'Page B', uv: 3000, pv: 1398, amt: 2210, value: 300 },
-      { name: 'Page C', uv: 2000, pv: 9800, amt: 2290, value: 500 },
-      { name: 'Page D', uv: 2780, pv: 3908, amt: 2000, value: 400 },
-      { name: 'Page E', uv: 1890, pv: 4800, amt: 2181, value: 200 },
-      { name: 'Page F', uv: 2390, pv: 3800, amt: 2500, value: 700 },
-      { name: 'Page G', uv: 3490, pv: 1300, amt: 2100, value: 100 },
-      { name: 'Page H', uv: 3490, pv: 3300, amt: 2100, value: 200 },
-      { name: 'Page I', uv: 2490, pv: 2300, amt: 2100, value: 300 },
-      { name: 'Page J', uv: 5490, pv: 2800, amt: 2100, value: 700 },
-      { name: 'Page G', uv: 4490, pv: 3800, amt: 2100, value: 400 },
-      { name: 'Page H', uv: 2490, pv: 1300, amt: 2100, value: 300 },
-      { name: 'Page I', uv: 5490, pv: 4300, amt: 2100, value: 500 },
-      { name: 'Page J', uv: 2490, pv: 3300, amt: 2100, value: 100 },
-      { name: 'Page K', uv: 4490, pv: 2300, amt: 2100, value: 500 },
-];
-
-
 // const pieData01 = [{ name: 'Group A', value: 400 }, { name: 'Group B', value: 300 },
 //                   { name: 'Group C', value: 300 }, { name: 'Group D', value: 200 }];
 
@@ -92,8 +73,8 @@ class Home extends Component {
               }
                 bgClass="info"
                 link="/dashboard/chartjs"
-                value="9"
-                progressValue={100}
+                value="0.54"
+                progressValue={10}
               />
 
               </div>
@@ -109,7 +90,7 @@ class Home extends Component {
                 bgClass="success"
                 link="/dashboard/chartjs"
                 value="T1"
-                progressValue={100}
+                progressValue={25}
               />
               </div>
 
@@ -124,8 +105,8 @@ class Home extends Component {
                 }
                 bgClass="warning"
                 link="/dashboard/inbox"
-                value="12,351"
-                progressValue={100}
+                value="7"
+                progressValue={70}
               />
               </div>
 
@@ -141,7 +122,7 @@ class Home extends Component {
                 bgClass="danger"
                 link="/dashboard/inbox"
                 value="82%"
-                progressValue={100}
+                progressValue={82}
               />
               </div>
 
@@ -151,7 +132,7 @@ class Home extends Component {
         <div className="row">
           <div className="col-md-12 col-lg-12">
             <div className={`map-container box padder ${s.powerSupplyChart}`}>
-              <Panel header={<span>PSA Charts</span>}>
+              <Panel header={<span>PSA Chart</span>}>
                 <div>
                   <ResponsiveContainer width="100%" height={275}>
                     <LineChart data={lineChartData}>
