@@ -286,7 +286,7 @@ class Home extends Component {
            <TodoList />
           </div>
         </div>
-      </div>
+      // </div>
     );
   }
 }
