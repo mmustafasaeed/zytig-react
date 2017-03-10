@@ -108,15 +108,14 @@ class Home extends Component {
               }
                 bgClass="success"
                 link="/dashboard/chartjs"
-                value="94%"
+                value="T3"
                 progressValue={94}
               />
               </div>
 
               <div className="col-md-3 col-lg-3">
               <Stats
-                icon="person-walking"
-
+                icon="ruler"
                 text={
                   <FormattedMessage
                     id="stat3"
@@ -133,7 +132,6 @@ class Home extends Component {
               <div className="col-md-3 col-lg-3">
               <Stats
                 icon="flag"
-
                 text={
                   <FormattedMessage
                     id="stat4"
@@ -142,7 +140,7 @@ class Home extends Component {
                 }
                 bgClass="danger"
                 link="/dashboard/inbox"
-                value="12,351"
+                value="94%"
                 progressValue={72}
               />
               </div>
