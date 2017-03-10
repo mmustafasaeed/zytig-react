@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Line, Bar, Pie, Doughnut } from 'react-chartjs';
-import { Panel } from 'react-bootstrap';
+import { Panel, ButtonToolbar, Button, ButtonGroup } from 'react-bootstrap';
 
 const title = 'ChartJs';
 
@@ -83,24 +83,28 @@ const chartOptions = {
 
 };
 
+
 const pieData = [
   {
-    value: 300,
+    name: "Fanny",
+    value: 0.7,
     color: '#F7464A',
     highlight: '#FF5A5E',
-    label: 'Red',
+    label: 'Probability of Death from Prostate Cancer',
   },
   {
-    value: 50,
+    name: "Dori",
+    value: 0.1,
     color: '#46BFBD',
     highlight: '#5AD3D1',
-    label: 'Green',
+    label: 'Probability of Death from other cause ',
   },
   {
-    value: 100,
+    name: "Sara",
+    value: 0.2,
     color: '#FDB45C',
     highlight: '#FFC870',
-    label: 'Yellow',
+    label: 'Probability of Survival',
   },
 ];
 
@@ -115,7 +119,7 @@ const donutOptions = {
   segmentStrokeWidth: 2,
 
     // Number - The percentage of the chart that we cut out of the middle
-  percentageInnerCutout: 50, // This is 0 for Pie charts
+  percentageInnerCutout: 70, // This is 0 for Pie charts
 
     // Number - Amount of animation steps
   animationSteps: 100,
@@ -129,7 +133,6 @@ const donutOptions = {
     // Boolean - Whether we animate scaling the Doughnut from the centre
   animateScale: false,
   responsive: true,
-
   scales: true,
 
     // String - A legend template
@@ -160,7 +163,7 @@ const pieOptions = {
   animationEasing: 'easeOutBounce',
 
     // Boolean - Whether we animate the rotation of the Doughnut
-  animateRotate: true,
+  animateRotate: false,
 
     // Boolean - Whether we animate scaling the Doughnut from the centre
   animateScale: false,
@@ -202,13 +205,24 @@ class Chartjs extends Component { //  eslint-disable-line
         </div>
 
         <div className="row">
-          <div className="col-md-6" id="doughnutChart">
+          <div className="col-md-12" id="doughnutChart">
             <Panel
-              header={<span>Donut Chart </span>}
+              header={<span> Statistics from NPCR </span>}
               bsStyle="primary"
             >
-              <Doughnut data={pieData} options={donutOptions} />
+              <div className="col-md-6"><p>10 years</p>
+              <style>{"\
+              p{\
+                text-align: center;\
+                padding-bottom: 5%;\
+                }\
+              "}</style>
+              <Doughnut data={pieData} options={donutOptions} /> </div>
+              <div className="col-md-6"><p>15 years</p><Doughnut data={pieData} options={donutOptions} /> </div>
             </Panel>
+          </div>
+          <div>
+          <Button bsStyle="primary" className="btn-rounded">Primary Button</Button>
           </div>
 
           <div className="col-md-6" id="barChart">
