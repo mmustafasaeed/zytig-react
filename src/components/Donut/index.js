@@ -23,7 +23,7 @@ const renderActiveShape = (props) => {
 
   return (
     <g>
-      <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>{payload.name}</text>
+      <text x={cx} y={cy} dy={8} textAnchor="left" fill={fill}>{payload.name}</text>
       <Sector
         cx={cx}
         cy={cy}
@@ -49,7 +49,7 @@ const renderActiveShape = (props) => {
         y={ey}
         textAnchor={textAnchor}
         fill="#333"
-      >
+        >
         {`Value ${value}`}
       </text>
       <text x={ex + ((cos >= 0 ? 1 : -1) * 12)} y={ey} dy={18} textAnchor={textAnchor} fill="red">
@@ -89,15 +89,17 @@ class Donut extends Component {
 
   render() {
     return (
-      <ResponsiveContainer width="100%" aspect={2} >
+      <ResponsiveContainer width="25%" aspect={2} >
         <PieCharts
-          margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+          margin={{ top: 10, right: 0, left: 0, bottom: 0 }}
           onMouseEnter={(data, index) => { this.onPieEnter(data, index);  }}
         >
           <Pie
             activeIndex={this.state.activeIndex}
             activeShape={renderActiveShape}
             data={this.props.data}
+            cx={cx}
+            cy={cy}
             innerRadius={this.props.innerRadius}
             outerRadius={this.props.outerRadius}
             fill={this.props.color}

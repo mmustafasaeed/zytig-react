@@ -68,14 +68,14 @@ class Home extends Component {
               }
                 bgClass="info"
                 link="/dashboard/chartjs"
-                value="9"
-                progressValue={90}
+                value="0.54"
+                progressValue={10}
               />
 
               </div>
               <div className="col-md-3 col-lg-3">
               <Stats
-                icon="heartbeat"
+                icon="signal"
                 text={
                   <FormattedMessage
                     id="stat2"
@@ -84,32 +84,30 @@ class Home extends Component {
               }
                 bgClass="success"
                 link="/dashboard/chartjs"
-                value="94%"
-                progressValue={94}
+                value="T1"
+                progressValue={25}
               />
               </div>
 
               <div className="col-md-3 col-lg-3">
               <Stats
-                icon="person-walking"
-
+                icon="list-alt"
                 text={
                   <FormattedMessage
                     id="stat3"
                     defaultMessage="Posts flagged"
                   />
                 }
-                bgClass="danger"
+                bgClass="warning"
                 link="/dashboard/inbox"
-                value="12,351"
-                progressValue={72}
+                value="7"
+                progressValue={70}
               />
               </div>
 
               <div className="col-md-3 col-lg-3">
               <Stats
-                icon="flag"
-
+                icon="heartbeat"
                 text={
                   <FormattedMessage
                     id="stat4"
@@ -118,8 +116,8 @@ class Home extends Component {
                 }
                 bgClass="danger"
                 link="/dashboard/inbox"
-                value="12,351"
-                progressValue={72}
+                value="82%"
+                progressValue={82}
               />
               </div>
 
@@ -129,7 +127,7 @@ class Home extends Component {
         <div className="row">
           <div className="col-md-12 col-lg-12">
             <div className={`map-container box padder ${s.powerSupplyChart}`}>
-              <Panel header={<span>PSA Charts</span>}>
+              <Panel header={<span>PSA Chart</span>}>
                 <div>
                   <ResponsiveContainer width="100%" height={275}>
                     <LineChart data={lineChartData}>
@@ -137,7 +135,8 @@ class Home extends Component {
                       <XAxis dataKey="date"/>
                       <YAxis dataKey="psa_total"/>
                       <Tooltip />
-                      <LineRechart type="monotone" dataKey="psa_total" stroke="#8884d8" />
+                      <LineRechart type="monotone" dataKey="psa_total" stroke="#0004d8" />
+                      <LineRechart type="monotone" dataKey="psa_fot" stroke="#8884d8" />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
