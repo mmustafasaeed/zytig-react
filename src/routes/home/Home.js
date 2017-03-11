@@ -64,8 +64,6 @@ function plotData() {
   for (var i=0; i< data.length; i++) {
     data[i].date = timeConverter(data[i].date);
     if(data[i].type == "psa") {
-      if(data[i].psa_fot)
-        delete(data[i].psa_fot);
       finalData.push(data[i]);
     }
   }
@@ -167,7 +165,6 @@ class Home extends Component {
                       <YAxis dataKey="psa_total"/>
                       <Tooltip />
                       <LineRechart type="monotone" dataKey="psa_total" stroke="#0004d8" />
-                      <LineRechart type="monotone" dataKey="psa_fot" stroke="#8884d8" />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
