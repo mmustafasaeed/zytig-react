@@ -140,7 +140,8 @@ class Home extends Component {
                       <XAxis dataKey="date"/>
                       <YAxis dataKey="psa_total"/>
                       <Tooltip />
-                      <LineRechart type="monotone" dataKey="psa_total" stroke="#8884d8" />
+                      <LineRechart type="monotone" dataKey="psa_total" stroke="#0004d8" />
+                      <LineRechart type="monotone" dataKey="psa_fot" stroke="#8884d8" />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
