@@ -103,6 +103,7 @@ class Donut extends Component {
             innerRadius={this.props.innerRadius}
             outerRadius={this.props.outerRadius}
             fill={this.props.color}
+            
           />
         </PieCharts>
       </ResponsiveContainer>

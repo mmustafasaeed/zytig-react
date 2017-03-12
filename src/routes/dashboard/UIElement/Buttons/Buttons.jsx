@@ -42,11 +42,12 @@ class Buttons extends Component {
             >
               <ButtonToolbar>
                 <Button bsStyle="default" className="btn-rounded">Default Button</Button>
-                <Button bsStyle="primary" className="btn-rounded">Primary Button</Button>
+                <Button bsStyle=" " className="btn-rounded">Primary Button</Button>
                 <Button bsStyle="success" className="btn-rounded">Success Button</Button>
                 <Button bsStyle="info" className="btn-rounded">Info Button</Button>
                 <Button bsStyle="warning" className="btn-rounded">Warning Button</Button>
                 <Button bsStyle="danger" className="btn-rounded">Danger Button</Button>
+
               </ButtonToolbar>
               <hr />
               <ButtonToolbar>
@@ -56,6 +57,8 @@ class Buttons extends Component {
                 <Button bsStyle="info">Info Button</Button>
                 <Button bsStyle="warning">Warning Button</Button>
                 <Button bsStyle="danger">Danger Button</Button>
+
+
               </ButtonToolbar>
               <hr />
               <ButtonToolbar>
