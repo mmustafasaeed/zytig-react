@@ -222,6 +222,7 @@ class Chartjs extends Component { //  eslint-disable-line
               bsStyle="primary"
             >
             <div className="col-md-12">
+            <a href="#">News <Badge></Badge></a>
             <div className="col-md-4"><Badge id="badge1"> </Badge><p> Death from Prostate Cancer </p></div>
             <div className="col-md-4"><Badge id="badge2"> </Badge><p> Death from Other Causes </p></div>
             <div className="col-md-4"><Badge id="badge3"> </Badge><p> Survival </p></div>
