@@ -9,32 +9,6 @@ import Dropdown, {
 
 const title = 'ChartJs';
 
-const chartData = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-  datasets: [
-    {
-      label: 'My First dataset',
-      fillColor: 'rgba(220,220,220,0.2)',
-      strokeColor: 'rgba(220,220,220,1)',
-      pointColor: 'rgba(220,220,220,1)',
-      pointStrokeColor: '#fff',
-      pointHighlightFill: '#fff',
-      pointHighlightStroke: 'rgba(220,220,220,1)',
-      data: [65, 59, 80, 81, 56, 55, 40],
-    },
-    {
-      label: 'My Second dataset',
-      fillColor: 'rgba(151,187,205,0.2)',
-      strokeColor: 'rgba(151,187,205,1)',
-      pointColor: 'rgba(151,187,205,1)',
-      pointStrokeColor: '#fff',
-      pointHighlightFill: '#fff',
-      pointHighlightStroke: 'rgba(151,187,205,1)',
-      data: [28, 48, 40, 19, 86, 27, 90],
-    },
-  ],
-};
-
 const chartOptions = {
 
     // /Boolean - Whether grid lines are shown across the chart
@@ -89,24 +63,22 @@ const chartOptions = {
 };
 
 
+
 const pieData = [
   {
-    name: "Fanny",
-    value: 0.6,
+    value: 0.009,
     color: '#F7464A',
     highlight: '#FF5A5E',
     label: 'Probability of Death from Prostate Cancer',
   },
   {
-    name: "Dori",
-    value: 0.1,
+    value: 0.079,
     color: '#FDB45C',
     highlight: '#FFC870',
     label: 'Probability of Death from other cause ',
   },
   {
-    name: "Sara",
-    value: 0.3,
+    value: 1-(0.009+0.079),
     color: '#46BFBD',
     highlight: '#5AD3D1',
     label: 'Probability of Survival',
@@ -115,22 +87,19 @@ const pieData = [
 
 const probability_15_data = [
   {
-    name: "Fanny",
-    value: 0.8,
+    value: 0.029,
     color: '#F7464A',
     highlight: '#FF5A5E',
     label: 'Probability of Death from Prostate Cancer',
   },
   {
-    name: "Dori",
-    value: 0.1,
+    value: 0.166,
     color: '#FDB45C',
     highlight: '#FFC870',
     label: 'Probability of Death from other cause ',
   },
   {
-    name: "Sara",
-    value: 0.1,
+    value: 1-(0.029+0.166),
     color: '#46BFBD',
     highlight: '#5AD3D1',
     label: 'Probability of Survival',
@@ -221,21 +190,25 @@ class Chartjs extends Component { //  eslint-disable-line
               header={<span> Statistics from NPCR </span>}
               bsStyle="primary"
             >
-
               <div className="col-md-6"><h4>10 years</h4>
               <style>{"\
               h4{\
                 text-align: center;\
-                padding-bottom: 5%;\
+                padding-bottom: 5px;\
                 }\
               "}</style>
               </div>
               <div className="col-md-6"><h4>15 years</h4></div>
 
-              <div className="col-md-4"><p><Badge id="badge1"> </Badge> Death from prostate cancer</p></div>
-              <div className="col-md-4"><p><Badge id="badge2"> </Badge> Death from other causes</p></div>
-              <div className="col-md-4"><p><Badge id="badge3"> </Badge> Survival</p></div>
+              <div className="col-md-3"></div>
+              <h5><Badge id="badge1"> </Badge> Death from prostate cancer
+              &nbsp;  <Badge id="badge2"> </Badge> Death from other causes &nbsp;
+              &nbsp;  <Badge id="badge3"> </Badge> Survival</h5>
+              <div className="col-md-9"></div>
               <style>{"\
+              h5{\
+                padding-bottom: 10px;\
+              }\
               #badge1{\
                 background-color: #F7464A;\
                 }\
@@ -251,10 +224,10 @@ class Chartjs extends Component { //  eslint-disable-line
               <div className="col-md-6"> <Doughnut data={probability_15_data} options={donutOptions}/></div>
 
               <ButtonToolbar>
-                <Button bsStyle="primary" className="btn-rounded">Age: 60-69</Button>
-                <Button bsStyle="primary" className="btn-rounded">M-stage: M1</Button>
+                <Button bsStyle="primary" className="btn-rounded">Age at diagnosis:50-59</Button>
+                <Button bsStyle="primary" className="btn-rounded">M-stage: MX</Button>
                 <Button bsStyle="primary" className="btn-rounded">PSA:10- </Button>
-                <Button bsStyle="primary" className="btn-rounded">Gleason: 6-9</Button>
+                <Button bsStyle="primary" className="btn-rounded">Gleason: 2-6</Button>
               </ButtonToolbar>
 
             </Panel>
