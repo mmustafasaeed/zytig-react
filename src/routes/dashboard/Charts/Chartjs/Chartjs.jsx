@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Line, Bar, Pie, Doughnut } from 'react-chartjs';
-import { Panel, Nav, NavItem, NavDropdown, MenuItem, Form, FormControl, FormGroup,
+import { Panel, Badge, Nav, NavItem, NavDropdown, MenuItem, Form, FormControl, FormGroup,
           Button, DropdownButton, ButtonToolbar, SplitButton } from 'react-bootstrap';
 import Dropdown, {
   Menu as DropDownMenu,
@@ -221,6 +221,22 @@ class Chartjs extends Component { //  eslint-disable-line
               header={<span> Statistics from NPCR </span>}
               bsStyle="primary"
             >
+            <div className="col-md-12">
+            <div className="col-md-4"><Badge id="badge1"> </Badge><p> Death from Prostate Cancer </p></div>
+            <div className="col-md-4"><Badge id="badge2"> </Badge><p> Death from Other Causes </p></div>
+            <div className="col-md-4"><Badge id="badge3"> </Badge><p> Survival </p></div>
+            <style>{"\
+            #badge1{\
+              background-color: #F7464A;\
+              }\
+            #badge2{\
+              background-color: #FDB45C;\
+              };\
+            #badge3{\
+              background-color: #5AD3D1;\
+              }\
+            "}</style>
+            </div>
               <div className="col-md-6"><h4>10 years</h4>
               <style>{"\
               h4{\
@@ -228,7 +244,8 @@ class Chartjs extends Component { //  eslint-disable-line
                 padding-bottom: 5%;\
                 }\
               "}</style>
-              <Doughnut data={pieData} options={donutOptions} /> </div>
+              <Doughnut data={pieData} options={donutOptions} />
+              </div>
               <div className="col-md-6"><h4>15 years</h4> <Doughnut data={probability_15_data} options={donutOptions} /> </div>
               <div className ="col-md-12">
               <ButtonToolbar>
