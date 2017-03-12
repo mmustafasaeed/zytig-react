@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { Line, Bar, Pie, Doughnut, Legend } from 'react-chartjs';
+import { Line, Bar, Pie, Doughnut } from 'react-chartjs';
 import { Panel, Nav, NavItem, NavDropdown, MenuItem, Form, FormControl, FormGroup,
           Button, DropdownButton, ButtonToolbar, SplitButton } from 'react-bootstrap';
 import Dropdown, {
@@ -168,6 +168,7 @@ const donutOptions = {
   + 'for (const i=0; i<segments.length; i++){%><li><span style='
   + '"background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%>'
   + '<%=segments[i].label%><%}%></li><%}%></ul>',
+
 };
 
 const pieOptions = {
@@ -212,23 +213,6 @@ class Chartjs extends Component { //  eslint-disable-line
     return (
       <div className="animate">
         <div className="row">
-          <div className="col-md-6" id="lineChart">
-            <Panel
-              header={<span>Line Chart </span>}
-              bsStyle="primary"
-            >
-              <Line data={chartData} options={chartOptions} />
-            </Panel>
-          </div>
-
-          <div className="col-md-6" id="barChart">
-            <Panel
-              header={<span>Bar Chart </span>}
-              bsStyle="primary"
-            >
-              <Bar data={chartData} options={chartOptions} />
-            </Panel>
-          </div>
         </div>
 
         <div className="row">
@@ -245,8 +229,7 @@ class Chartjs extends Component { //  eslint-disable-line
                 }\
               "}</style>
               <Doughnut data={pieData} options={donutOptions} /> </div>
-              <div className="col-md-6"><h4>15 years</h4> <Doughnut data={probability_15_data} options={donutOptions} />
-              </div>
+              <div className="col-md-6"><h4>15 years</h4> <Doughnut data={probability_15_data} options={donutOptions} /> </div>
               <div className ="col-md-12">
               <ButtonToolbar>
                 <Button bsStyle="primary" className="btn-rounded">Age: 60-69</Button>
@@ -255,18 +238,6 @@ class Chartjs extends Component { //  eslint-disable-line
                 <Button bsStyle="primary" className="btn-rounded">Gleason: 6-9</Button>
                 </ButtonToolbar>
               </div>
-            </Panel>
-          </div>
-          <div>
-          <Button bsStyle="primary" className="btn-rounded">Primary Button</Button>
-          </div>
-
-          <div className="col-md-6" id="barChart">
-            <Panel
-              header={<span>Pie Chart </span>}
-              bsStyle="primary"
-            >
-              <Pie data={pieData} options={pieOptions} />
             </Panel>
           </div>
         </div>
