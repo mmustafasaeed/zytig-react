@@ -1,6 +1,7 @@
 
 
 import React, { PropTypes, Component } from 'react';
+// import { Brush } from 'recharts';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import { Panel } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
@@ -9,7 +10,7 @@ import Stats from '../../components/common/Stats';
 import TodoList from '../../components/common/TodoList';
 import {
   LineChart, Tooltip, XAxis, YAxis, CartesianGrid, Line as LineRechart, AreaChart, Area,
-  BarChart, Bar, ResponsiveContainer } from '../../vendor/recharts';
+  BarChart, Bar, Brush, ResponsiveContainer } from '../../vendor/recharts';
 
 import CustomPieChart from '../../components/CustomPieChart';
 
@@ -69,6 +70,11 @@ function plotData() {
   }
   return finalData;
 }
+
+//const {BarChart, Bar, Brush, ReferenceLine, XAxis, YAxis, CartesianGrid, Tooltip, Legend} = Recharts;
+
+
+
 const lineChartData = plotData();
 
 class Home extends Component {
@@ -98,7 +104,7 @@ class Home extends Component {
                 bgClass="info"
                 link="/dashboard/chartjs"
                 value="0.54"
-                progressValue={10}
+                progressValue={100}
               />
 
               </div>
@@ -114,7 +120,7 @@ class Home extends Component {
                 bgClass="success"
                 link="/dashboard/chartjs"
                 value="T1"
-                progressValue={25}
+                progressValue={100}
               />
               </div>
 
@@ -130,7 +136,7 @@ class Home extends Component {
                 bgClass="warning"
                 link="/dashboard/inbox"
                 value="7"
-                progressValue={70}
+                progressValue={100}
               />
               </div>
 
@@ -144,9 +150,9 @@ class Home extends Component {
                   />
                 }
                 bgClass="danger"
-                link="/dashboard/inbox"
+                link="/dashboard/chartjs"
                 value="82%"
-                progressValue={82}
+                progressValue={100}
               />
               </div>
 
@@ -165,6 +171,7 @@ class Home extends Component {
                       <YAxis dataKey="psa_total"/>
                       <Tooltip />
                       <LineRechart type="monotone" dataKey="psa_total" stroke="#0004d8" />
+                      <Brush dataKey='name' height={30} stroke="#8884d8"/>
                     </LineChart>
                   </ResponsiveContainer>
                 </div>

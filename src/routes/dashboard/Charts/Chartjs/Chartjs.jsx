@@ -1,6 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import { Line, Bar, Pie, Doughnut } from 'react-chartjs';
-import { Panel, ButtonToolbar, Button, ButtonGroup } from 'react-bootstrap';
+import { Panel, Nav, NavItem, NavDropdown, MenuItem, Form, FormControl, FormGroup,
+          Button, DropdownButton, ButtonToolbar, SplitButton } from 'react-bootstrap';
+import Dropdown, {
+  Menu as DropDownMenu,
+  Toggle as DropDownToggle,
+} from 'react-bootstrap/lib/Dropdown';
 
 const title = 'ChartJs';
 
@@ -87,7 +92,7 @@ const chartOptions = {
 const pieData = [
   {
     name: "Fanny",
-    value: 0.7,
+    value: 0.6,
     color: '#F7464A',
     highlight: '#FF5A5E',
     label: 'Probability of Death from Prostate Cancer',
@@ -95,19 +100,42 @@ const pieData = [
   {
     name: "Dori",
     value: 0.1,
-    color: '#46BFBD',
-    highlight: '#5AD3D1',
+    color: '#FDB45C',
+    highlight: '#FFC870',
     label: 'Probability of Death from other cause ',
   },
   {
     name: "Sara",
-    value: 0.2,
-    color: '#FDB45C',
-    highlight: '#FFC870',
+    value: 0.3,
+    color: '#46BFBD',
+    highlight: '#5AD3D1',
     label: 'Probability of Survival',
   },
 ];
 
+const probability_15_data = [
+  {
+    name: "Fanny",
+    value: 0.8,
+    color: '#F7464A',
+    highlight: '#FF5A5E',
+    label: 'Probability of Death from Prostate Cancer',
+  },
+  {
+    name: "Dori",
+    value: 0.1,
+    color: '#FDB45C',
+    highlight: '#FFC870',
+    label: 'Probability of Death from other cause ',
+  },
+  {
+    name: "Sara",
+    value: 0.1,
+    color: '#46BFBD',
+    highlight: '#5AD3D1',
+    label: 'Probability of Survival',
+  },
+];
 const donutOptions = {
     // Boolean - Whether we should show a stroke on each segment
   segmentShowStroke: true,
@@ -185,23 +213,6 @@ class Chartjs extends Component { //  eslint-disable-line
     return (
       <div className="animate">
         <div className="row">
-          <div className="col-md-6" id="lineChart">
-            <Panel
-              header={<span>Line Chart </span>}
-              bsStyle="primary"
-            >
-              <Line data={chartData} options={chartOptions} />
-            </Panel>
-          </div>
-
-          <div className="col-md-6" id="barChart">
-            <Panel
-              header={<span>Bar Chart </span>}
-              bsStyle="primary"
-            >
-              <Bar data={chartData} options={chartOptions} />
-            </Panel>
-          </div>
         </div>
 
         <div className="row">
@@ -210,27 +221,24 @@ class Chartjs extends Component { //  eslint-disable-line
               header={<span> Statistics from NPCR </span>}
               bsStyle="primary"
             >
-              <div className="col-md-6"><p>10 years</p>
+              <div className="col-md-6"><h4>10 years</h4>
               <style>{"\
-              p{\
+              h4{\
                 text-align: center;\
                 padding-bottom: 5%;\
                 }\
               "}</style>
               <Doughnut data={pieData} options={donutOptions} /> </div>
-              <div className="col-md-6"><p>15 years</p><Doughnut data={pieData} options={donutOptions} /> </div>
-            </Panel>
-          </div>
-          <div>
-          <Button bsStyle="primary" className="btn-rounded">Primary Button</Button>
-          </div>
-
-          <div className="col-md-6" id="barChart">
-            <Panel
-              header={<span>Pie Chart </span>}
-              bsStyle="primary"
-            >
-              <Pie data={pieData} options={pieOptions} />
+              <div className="col-md-6"><h4>15 years</h4> <Doughnut data={probability_15_data} options={donutOptions} /> </div>
+              <div className ="col-md-12">
+              <Legend verticalAlign="top" wrapperStyle={{lineHeight: '40px'}}/>
+              <ButtonToolbar>
+                <Button bsStyle="primary" className="btn-rounded">Age: 60-69</Button>
+                <Button bsStyle="primary" className="btn-rounded">M-stage: M1</Button>
+                <Button bsStyle="primary" className="btn-rounded">PSA:10- </Button>
+                <Button bsStyle="primary" className="btn-rounded">Gleason: 6-9</Button>
+                </ButtonToolbar>
+              </div>
             </Panel>
           </div>
         </div>
