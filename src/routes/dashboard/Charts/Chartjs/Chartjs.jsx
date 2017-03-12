@@ -226,10 +226,10 @@ class Chartjs extends Component { //  eslint-disable-line
               <div className="col-md-6"> <Doughnut data={probability_15_data} options={donutOptions}/></div>
 
               <div className="col-md-12" id="buttons">
-                <Button bsStyle="primary" className="btn-rounded">Age at diagnosis:50-59</Button>
-                <Button bsStyle="primary" className="btn-rounded">M-stage: MX</Button>
-                <Button bsStyle="primary" className="btn-rounded">PSA:10- </Button>
-                <Button bsStyle="primary" className="btn-rounded">Gleason: 2-6</Button>
+                <Button  className="btn-rounded">Age at diagnosis: 50-59 </Button>
+                <Button  className="btn-rounded">M-stage: MX </Button>
+                <Button  className="btn-rounded">PSA:10- </Button>
+                <Button  className="btn-rounded">Gleason: 2-6 </Button>
                 <style>{"\
                 .btn-rounded{\
                   margin-top: 20px;\
