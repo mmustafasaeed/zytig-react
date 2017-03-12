@@ -221,6 +221,7 @@ class Chartjs extends Component { //  eslint-disable-line
               header={<span> Statistics from NPCR </span>}
               bsStyle="primary"
             >
+
               <div className="col-md-6"><h4>10 years</h4>
               <style>{"\
               h4{\
