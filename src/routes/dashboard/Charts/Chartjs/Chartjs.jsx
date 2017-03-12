@@ -79,8 +79,8 @@ const pieData = [
   },
   {
     value: 1-(0.009+0.079),
-    color: '#46BFBD',
-    highlight: '#5AD3D1',
+    color: '#2EAC6B',
+    highlight: '#57BC88',
     label: 'Probability of Survival',
   },
 ];
@@ -100,8 +100,8 @@ const probability_15_data = [
   },
   {
     value: 1-(0.029+0.166),
-    color: '#46BFBD',
-    highlight: '#5AD3D1',
+    color: '#2EAC6B',
+    highlight: '#57BC88',
     label: 'Probability of Survival',
   },
 ];
@@ -218,7 +218,7 @@ class Chartjs extends Component { //  eslint-disable-line
                 background-color: #FDB45C;\
                 }\
               #badge3{\
-                background-color: #5AD3D1;\
+                background-color: #2EAC6B;\
                 }\
               "}</style>
 
