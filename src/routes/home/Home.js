@@ -9,7 +9,7 @@ import s from './Home.css';
 import Stats from '../../components/common/Stats';
 import TodoList from '../../components/common/TodoList';
 import {
-  LineChart, Tooltip, XAxis, YAxis, CartesianGrid, Line as LineRechart, AreaChart, Area,
+  LineChart, Tooltip, XAxis, YAxis, ZAxis, CartesianGrid, ComposedChart, Line as LineRechart, AreaChart, Area,
   BarChart, Bar, Brush, ResponsiveContainer } from '../../vendor/recharts';
 
 import CustomPieChart from '../../components/CustomPieChart';
@@ -71,9 +71,23 @@ function plotData() {
   return finalData;
 }
 
+
 //const {BarChart, Bar, Brush, ReferenceLine, XAxis, YAxis, CartesianGrid, Tooltip, Legend} = Recharts;
 
+// const data = [{name: 'Page A', uv: 590, pv: 800, amt: 1400},
+//               {name: 'Page B', uv: 868, pv: 967, amt: 1506},
+//               {name: 'Page C', uv: 1397, pv: 1098, amt: 989},
+//               {name: 'Page D', uv: 1480, pv: 1200, amt: 1228},
+//               {name: 'Page E', uv: 1520, pv: 1108, amt: 1100},
+//               {name: 'Page F', uv: 1400, pv: 680, amt: 1700}];
+var medicationData = [
+  { "duration": 700, "date": 1197763200, "name": "chemo therapy"},
+  {"duration": 900, "date": 1404259200,  "name": "radiation therapy"}
+]
 
+for (var i = 0; i < medicationData.length; i++) {
+  medicationData[i].date = timeConverter(medicationData[i].date);
+}
 
 const lineChartData = plotData();
 
@@ -134,7 +148,7 @@ class Home extends Component {
                   />
                 }
                 bgClass="warning"
-                link="/dashboard/inbox"
+                link="/dashboard/chartjs"
                 value="7"
                 progressValue={100}
               />
@@ -165,7 +179,7 @@ class Home extends Component {
               <Panel header={<span>PSA Chart</span>}>
                 <div>
                   <ResponsiveContainer width="100%" height={275}>
-                    <LineChart data={lineChartData}>
+                    <LineChart data={lineChartData} margin={{top: 20, right: 20, bottom: 20, left: 20}}>
                       <CartesianGrid stroke="#ccc" />
                       <XAxis dataKey="date"/>
                       <YAxis dataKey="psa_total"/>
@@ -179,7 +193,35 @@ class Home extends Component {
             </div>
           </div>
         </div>
+
+        <div className="row">
+          <div className="col-md-12 col-lg-12">
+            <div className={`map-container box padder ${s.powerSupplyChart}`}>
+              <Panel header={<span>Medication Chart</span>}>
+                <div>
+                  <ResponsiveContainer width="100%" height={275}>
+                    <ComposedChart layout="vertical" width={600} height={400} data={medicationData}
+                      margin={{top: 20, right: 20, bottom: 20, left: 20}}>
+                      <XAxis dataKey="duration"/>
+                       <YAxis dataKey="name" type="category"/>
+                       <Tooltip dataKey="name"/>
+                      // <CartesianGrid stroke='#f5f5f5'/>
+                      // <Area dataKey='amt' fill='#8884d8' stroke='#8884d8'/>
+                      <Bar dataKey='duration' barSize={20} fill='#413ea0'/>
+                      // <LineChart dataKey='uv' stroke='#ff7300'/>
+                    </ComposedChart>
+                  </ResponsiveContainer>
+                </div>
+              </Panel>
+            </div>
+          </div>
+        </div>
+
+
       </div>
+
+
+
 
 
 
