@@ -9,13 +9,13 @@ class SidebarNewsFeed extends Component {
   render() {
     return (
       <div className="text-center">
-        <Link to="/dashboard/profile">
+        
           <img
             src={profilePicture}
             className={`user-avatar ${s.userAvatar}`}
             alt="user profile"
           />
-        </Link>
+       
         <div className={`text-center ${s.avatarName}`}>
           Patient
         </div>
