@@ -14,20 +14,20 @@ class SidebarWidgets extends Component { // eslint-disable-line
           <SidebarProfile />
           <div id="personalInfo">
             <br></br>
-            <p>Name</p>
-            <p>Date of birth</p>
-            <p>Age: </p>
+            <p>Name: Filip Svensson</p>
+            <p>Date of birth: 1955.10.26 </p>
+            <p>Age: 61 </p>
           </div>
           <div id="familyHistory">
-            <p>Family history of cancer</p>
+            <p>Family history, cancer: No</p>
             <p></p>
           </div>
           <div id="comorbidity">
-            <p>Comorbidity</p>
-            <p>Surgery</p>
-            <p>Stroke</p>
-            <p>Smoking</p>
-            <p>Prostate size</p>
+            <p>Comorbidity: No</p>
+            <p>Surgery: Yes</p>
+            <p>Stroke: No</p>
+            <p>Smoking: Yes</p>
+            <p>Prostate size: 30 ccm </p>
           </div>
         </div>
       </div>
