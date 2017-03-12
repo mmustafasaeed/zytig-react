@@ -200,35 +200,47 @@ class Chartjs extends Component { //  eslint-disable-line
               </div>
               <div className="col-md-6"><h4>15 years</h4></div>
 
-              <div className="col-md-3"></div>
+              <div className="col-md-12">
               <h5><Badge id="badge1"> </Badge> Death from prostate cancer
               &nbsp;  <Badge id="badge2"> </Badge> Death from other causes &nbsp;
               &nbsp;  <Badge id="badge3"> </Badge> Survival</h5>
-              <div className="col-md-9"></div>
+              </div>
               <style>{"\
               h5{\
                 padding-bottom: 10px;\
+                padding-top: 10px;\
+                text-align: center;\
               }\
               #badge1{\
                 background-color: #F7464A;\
                 }\
               #badge2{\
                 background-color: #FDB45C;\
-                };\
+                }\
               #badge3{\
-                background-color: #46BFBD;\
+                background-color: #5AD3D1;\
                 }\
               "}</style>
 
               <div className="col-md-6"><Doughnut data={pieData} options={donutOptions} /></div>
               <div className="col-md-6"> <Doughnut data={probability_15_data} options={donutOptions}/></div>
 
-              <ButtonToolbar>
+              <div className="col-md-12" id="buttons">
                 <Button bsStyle="primary" className="btn-rounded">Age at diagnosis:50-59</Button>
                 <Button bsStyle="primary" className="btn-rounded">M-stage: MX</Button>
                 <Button bsStyle="primary" className="btn-rounded">PSA:10- </Button>
                 <Button bsStyle="primary" className="btn-rounded">Gleason: 2-6</Button>
-              </ButtonToolbar>
+                <style>{"\
+                .btn-rounded{\
+                  margin-top: 20px;\
+                  margin-right: 2%;\
+                  margin-left: 2%;\
+                  }\
+                #buttons{\
+                  text-align: center;\
+                }\
+                "}</style>
+              </div>
 
             </Panel>
           </div>
