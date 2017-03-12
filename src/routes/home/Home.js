@@ -98,7 +98,7 @@ class Home extends Component {
                 bgClass="info"
                 link="/dashboard/chartjs"
                 value="0.54"
-                progressValue={10}
+                progressValue={100}
               />
 
               </div>
@@ -114,7 +114,7 @@ class Home extends Component {
                 bgClass="success"
                 link="/dashboard/chartjs"
                 value="T1"
-                progressValue={25}
+                progressValue={100}
               />
               </div>
 
@@ -130,7 +130,7 @@ class Home extends Component {
                 bgClass="warning"
                 link="/dashboard/inbox"
                 value="7"
-                progressValue={70}
+                progressValue={100}
               />
               </div>
 
@@ -144,9 +144,9 @@ class Home extends Component {
                   />
                 }
                 bgClass="danger"
-                link="/dashboard/inbox"
+                link="/dashboard/chartjs"
                 value="82%"
-                progressValue={82}
+                progressValue={100}
               />
               </div>
 
