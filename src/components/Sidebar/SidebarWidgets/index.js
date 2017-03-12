@@ -13,8 +13,10 @@ class SidebarWidgets extends Component { // eslint-disable-line
         <div className={`widgets-content ${s.widgetsContent}`}>
           <SidebarProfile />
           <div id="personalInfo">
+            <br></br>
+            <p>Name</p>
             <p>Date of birth</p>
-            <p></p>
+            <p>Age: </p>
           </div>
           <div id="familyHistory">
             <p>Family history of cancer</p>
@@ -24,6 +26,8 @@ class SidebarWidgets extends Component { // eslint-disable-line
             <p>Comorbidity</p>
             <p>Surgery</p>
             <p>Stroke</p>
+            <p>Smoking</p>
+            <p>Prostate size</p>
           </div>
         </div>
       </div>
