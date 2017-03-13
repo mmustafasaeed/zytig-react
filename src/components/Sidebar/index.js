@@ -11,7 +11,7 @@ class Sidebar extends Component {
     return (
       <aside className={s.sidebar}>
         <div className={'sidenav-outer ' + s.sidenavOuter}>
-          <MenuBar />
+         //<MenuBar />
           <SidebarWidgets />
         </div>
       </aside>

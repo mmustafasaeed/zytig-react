@@ -111,7 +111,7 @@ class MenuBar extends Component {
               onClick={() => { this.handleActiveClass('home'); }}
             >
               <Link to="/">
-                <span className="glyphicon glyphicon-home" />
+                <span className="" />
               </Link>
               <ul className={`nested-dropdown animated fadeIn ${s.nestedDropdown}`}>
                 <li><Link to="/">
@@ -127,7 +127,7 @@ class MenuBar extends Component {
               onClick={() => { this.handleActiveClass('typography'); }}
             >
               <Link to="/dashboard/typography">
-                <span className="glyphicon glyphicon-text-size" />
+                <span className="" />
               </Link>
               <ul className={`nested-dropdown animated fadeIn ${s.nestedDropdown}`}>
                 <li><Link to="/dashboard/typography">
@@ -143,7 +143,7 @@ class MenuBar extends Component {
               onClick={(e) => { e.preventDefault(); this.handleActiveClass('grid'); }}
             >
               <Link to="/dashboard/grid">
-                <span className="glyphicon glyphicon-th-large" />
+                <span className="" />
               </Link>
               <ul className={`nested-dropdown animated fadeIn ${s.nestedDropdown}`}>
                 <li>
@@ -161,7 +161,7 @@ class MenuBar extends Component {
               onClick={() => { this.handleActiveClass('table'); }}
             >
               <Link to="/dashboard/table">
-                <span className="glyphicon glyphicon-list" />
+                <span className="" />
               </Link>
               <ul className={`nested-dropdown animated fadeIn ${s.nestedDropdown}`}>
                 <li>
@@ -179,7 +179,7 @@ class MenuBar extends Component {
               onClick={() => { this.handleActiveClass('form'); }}
             >
               <Link to="/dashboard/elements">
-                <span className="glyphicon glyphicon-equalizer" />
+                <span className="" />
               </Link>
               <ul className={`nested-dropdown animated fadeIn ${s.nestedDropdown}`}>
                 <li
@@ -219,7 +219,8 @@ class MenuBar extends Component {
               onClick={() => { this.handleActiveClass('userInterface'); }}
             >
               <Link to="/dashboard/buttons">
-                <span className="glyphicon glyphicon-cloud-download" />
+                <span className="" />
+
               </Link>
               <ul className={`nested-dropdown animated fadeIn ${s.nestedDropdown}`}>
                 <li className={`sidemenu-header ${s.sideMenuHeader}`}>
@@ -283,7 +284,7 @@ class MenuBar extends Component {
               onClick={() => { this.handleActiveClass('chart'); }}
             >
               <Link to="/dashboard/chartjs">
-                <span className="glyphicon glyphicon-signal" />
+                <span className="" />
               </Link>
               <ul className={`nested-dropdown animated fadeIn ${s.nestedDropdown}`}>
                 <li className={`sidemenu-header ${s.sideMenuHeader}`}>
@@ -310,7 +311,7 @@ class MenuBar extends Component {
               onClick={() => { this.handleActiveClass('calendar'); }}
             >
               <Link to="/dashboard/calendar">
-                <span className="glyphicon glyphicon-calendar" />
+                <span className="" />
               </Link>
               <ul className={`nested-dropdown animated fadeIn ${s.nestedDropdown}`}>
                 <li><Link to="/dashboard/calendar">
@@ -326,7 +327,7 @@ class MenuBar extends Component {
               onClick={() => { this.handleActiveClass('mail'); }}
             >
               <Link to="/dashboard/inbox">
-                <span className="glyphicon glyphicon-envelope" />
+                <span className="" />
               </Link>
               <ul className={`nested-dropdown animated fadeIn ${s.nestedDropdown}`}>
                 <li className={`sidemenu-header ${s.sideMenuHeader}`}>
@@ -354,7 +355,7 @@ class MenuBar extends Component {
               onClick={() => { this.handleActiveClass('invoice'); }}
             >
               <Link to="/dashboard/invoice">
-                <span className="glyphicon glyphicon-list-alt" />
+                <span className="" />
               </Link>
               <ul className={`nested-dropdown animated fadeIn ${s.nestedDropdown}`}>
                 <li><Link to="/dashboard/invoice">
@@ -370,7 +371,7 @@ class MenuBar extends Component {
               onClick={() => { this.handleActiveClass('docs'); }}
             >
               <Link to="/dashboard/docs">
-                <span className="glyphicon glyphicon-credit-card" />
+                <span className="" />
               </Link>
               <ul className={`nested-dropdown animated fadeIn ${s.nestedDropdown}`}>
                 <li><Link to="/dashboard/docs">
@@ -386,7 +387,7 @@ class MenuBar extends Component {
               onClick={() => { this.handleActiveClass('miscellaneous'); }}
             >
               <Link to="/dashboard/blank">
-                <span className="glyphicon glyphicon-duplicate" />
+                <span className="" />
               </Link>
               <ul className={`nested-dropdown animated fadeIn ${s.nestedDropdown}`}>
                 <li className={`sidemenu-header ${s.sideMenuHeader}`}>
