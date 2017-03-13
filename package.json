@@ -4,6 +4,7 @@
   "description": "Prostrate Cancer visualization - Individual",
   "private": true,
   "author": "Mustafa Saeed",
+  "homepage":"https://mmustafasaeed.github.io/zytig-react/",
   "engines": {
     "node": ">=5.0 <7",
     "npm": ">=3.3 <4"

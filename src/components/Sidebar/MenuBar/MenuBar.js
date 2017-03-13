@@ -133,7 +133,7 @@ class MenuBar extends Component {
                 <li><Link to="/dashboard/typography">
                   <FormattedMessage
                     id="typography"
-                    defaultMessage="Typography"
+                    defaultMessage=""
                   /></Link>
                 </li>
               </ul>
